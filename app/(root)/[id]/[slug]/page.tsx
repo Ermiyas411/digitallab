@@ -1,4 +1,3 @@
-import PDFReader from "@/components/PDFReader";
 import React from "react";
 import { getCatagoryResources } from "@/sanity/actions";
 
@@ -14,13 +13,7 @@ const page = async ({ searchParams }: Props) => {
   });
   return (
     <div>
-      {resources?.length > 0 ? (
-        resources.map((resource: any) => (
-          <PDFReader key={resource._id} url={resource.url} />
-        ))
-      ) : (
-        <p className="body-regular text-white-400">No resources found</p>
-      )}
+      <p className="body-regular text-white-400">No resources found</p>
     </div>
   );
 };
